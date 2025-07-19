@@ -1,16 +1,16 @@
 module ram (
     input clk,
     input [9:0] Address,
-    input [7:0] WriteData,
+    input [31:0] WriteData,
     input WriteEn,
     input ReadEn,
-    output reg [7:0] ReadData
+    output reg [31:0] ReadData
 );
 
-  reg [7:0] register[1023:0];
+  reg [31:0] register[1023:0];
 
-  always @(negedge clk) begin
-    if (WriteEn) register[Address] <= ReadData;
+  always @(posedge clk) begin
+    if (WriteEn) register[Address] <= WriteData;
   end
 
   always @(*) begin
