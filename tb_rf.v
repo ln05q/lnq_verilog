@@ -34,6 +34,10 @@ module tb_rf;
   // Testbench
 
   initial begin
+
+    $dumpfile("tb_rf.vcd");  // waveform file
+    $dumpvars(0, "tb_rf");  // dump variables
+
     clk = 0;
     ReadAddress1 = 5'd0;
     ReadAddress2 = 5'd0;
@@ -42,7 +46,7 @@ module tb_rf;
     ReadWriteEn = 1'b0;
 
 
-    // Per clock cycle, can write to only 1 register 
+    // Per clock cycle, can write to only 1 register
 
     $monitor("TIME: %d | ReadAddress1 = %d | ReadAddress2 = %d | ReadData1 = %d | ReadData2 = %d",
              $time, ReadAddress1, ReadAddress2, ReadData1, ReadData2);
