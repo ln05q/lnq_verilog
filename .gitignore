@@ -1,2 +1,5 @@
-#ignore .vcd
+# Ignore .vcd
+*.vcd
 
+# Ignore .vvp
+*.vvp
