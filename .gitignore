@@ -1,5 +1,5 @@
-# Ignore .vcd
+# Ignore all .vcd files
 *.vcd
 
-# Ignore .vvp
+# Ignore all .vvp files
 *.vvp
