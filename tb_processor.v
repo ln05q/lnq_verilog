@@ -24,6 +24,11 @@ module tb_processor;
   always #5 clk = ~clk;
 
   initial begin
+    
+    $dumpfile("tb_processor.vcd"); // waveform file
+    $dumpvars(0, tb_processor);
+
+
     clk = 0;
     instruction = 32'b00000000000000000000000000000000;
 
