@@ -40,6 +40,10 @@ module tb_datapath;
   always #5 clk = ~clk;
 
   initial begin
+    
+      $dumpfile("tb_datapath.vcd"); // waveform file
+      $dumpvars(0,tb_datapath); //
+
     clk = 0;
     instruction = 32'd0;
     RegDst = 0;
