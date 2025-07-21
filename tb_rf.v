@@ -36,7 +36,7 @@ module tb_rf;
   initial begin
 
     $dumpfile("tb_rf.vcd");  // waveform file
-    $dumpvars(0, "tb_rf");  // dump variables
+    $dumpvars(0, tb_rf);  // dump variables
 
     clk = 0;
     ReadAddress1 = 5'd0;
